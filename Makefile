@@ -37,7 +37,7 @@ benchmark: all
 
 schedule.js: $(shell node_modules/.bin/smash --list src/schedule.js)
 	@rm -f $@
-	node_modules/.bin/smash src/schedule.js | node_modules/.bin/uglifyjs - -b indent-level=2 -o $@
+	node_modules/.bin/smash src/schedule.js | node_modules/.bin/uglifyjs -b indent_level=2 -o $@
 	@chmod a-w $@
 
 schedule.min.js: schedule.js
